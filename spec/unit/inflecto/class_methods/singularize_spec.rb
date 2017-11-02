@@ -43,7 +43,20 @@ describe Inflecto, '.singularize' do
     'octopi' => 'octopus',
     'grass' => 'grass',
   # ==== bugs, typos and reported issues
+
+    # ending with 'ss'
     'address' => 'address',
+    'boss' => 'boss',
+    'class' => 'class',
+    'glass' => 'glass',
+    'kiss' => 'kiss',
+
+    # ending with 'sses'
+    'addresses' => 'address',
+    'bosses' => 'boss',
+    'classes' => 'class',
+    'glasses' => 'glass',
+    'kisses' => 'kiss',
 
   # ==== rules
 
