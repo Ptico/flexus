@@ -120,7 +120,6 @@ describe Inflecto, '.pluralize' do
     'fix'          => 'fixes',
     'box'          => 'boxes',
     'process'      => 'processes',
-    'address'      => 'addresses',
     'case'         => 'cases',
     'stack'        => 'stacks',
     'wish'         => 'wishes',
@@ -157,6 +156,20 @@ describe Inflecto, '.pluralize' do
     'horse'        => 'horses',
     'edge'         => 'edges',
     'cow'          => 'cows',
+
+    # Ending with 'ss'
+    'address' => 'addresses',
+    'boss' => 'bosses',
+    'class' => 'classes',
+    'glass' => 'glasses',
+    'kiss' => 'kisses',
+
+    # Ending with 'sses'
+    'addresses' => 'addresses',
+    'bosses' => 'bosses',
+    'classes' => 'classes',
+    'glasses' => 'glasses',
+    'kisses' => 'kisses',
   }
 
   # Missing rule or exception?
