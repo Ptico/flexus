@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto, '.inflections' do
+describe Flexus, '.inflections' do
   context 'when block given' do
     it 'yields inflections instance' do
       yielded = nil
@@ -9,13 +9,13 @@ describe Inflecto, '.inflections' do
         yielded = inflect
       end
 
-      yielded.should be(Inflecto::Inflections.instance)
+      yielded.should be(Flexus::Inflections.instance)
     end
   end
 
   context 'when without block' do
     subject { described_class.inflections }
 
-    it { should be(Inflecto::Inflections.instance) }
+    it { should be(Flexus::Inflections.instance) }
   end
 end

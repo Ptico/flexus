@@ -1,4 +1,4 @@
-module Inflecto
+module Flexus
   # Wraps inflections array
   #
   class RulesCollection

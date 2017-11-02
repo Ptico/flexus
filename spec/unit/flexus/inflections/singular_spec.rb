@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto::Inflections, '#singular' do
+describe Flexus::Inflections, '#singular' do
   subject { object.singular(rule, replacement) }
 
   let(:object)      { described_class.new }

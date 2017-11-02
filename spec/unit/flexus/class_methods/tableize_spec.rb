@@ -1,27 +1,27 @@
 require 'spec_helper'
 
-describe Inflecto, '.tableize' do
+describe Flexus, '.tableize' do
   it 'pluralizes last word in snake_case strings: fancy_category => fancy_categories' do
-    Inflecto.tableize(i('fancy_category')).should == 'fancy_categories'
+    Flexus.tableize(i('fancy_category')).should == 'fancy_categories'
   end
 
   it 'underscores CamelCase strings before pluralization: enlarged_testis => enlarged_testes' do
-    Inflecto.tableize(i('enlarged_testis')).should == 'enlarged_testes'
+    Flexus.tableize(i('enlarged_testis')).should == 'enlarged_testes'
   end
 
   it 'underscores CamelCase strings before pluralization: FancyCategory => fancy_categories' do
-    Inflecto.tableize(i('FancyCategory')).should == 'fancy_categories'
+    Flexus.tableize(i('FancyCategory')).should == 'fancy_categories'
   end
 
   it 'underscores CamelCase strings before pluralization: EnlargedTestis => enlarged_testes' do
-    Inflecto.tableize(i('EnlargedTestis')).should == 'enlarged_testes'
+    Flexus.tableize(i('EnlargedTestis')).should == 'enlarged_testes'
   end
 
   it 'replaces :: with underscores: My::Fancy::Category => my_fancy_categories' do
-    Inflecto.tableize(i('My::Fancy::Category')).should == 'my_fancy_categories'
+    Flexus.tableize(i('My::Fancy::Category')).should == 'my_fancy_categories'
   end
 
   it 'underscores CamelCase strings before pluralization: Enlarged::Testis => enlarged_testes' do
-    Inflecto.tableize(i('Enlarged::Testis')).should == 'enlarged_testes'
+    Flexus.tableize(i('Enlarged::Testis')).should == 'enlarged_testes'
   end
 end

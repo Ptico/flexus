@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto::Inflections, '#clear' do
+describe Flexus::Inflections, '#clear' do
   subject { object.clear }
 
   let(:object) { described_class.new }

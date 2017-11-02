@@ -1,8 +1,8 @@
-module Inflecto
-  # A singleton instance of this class is yielded by Inflecto.inflections, which can then be used to specify additional
+module Flexus
+  # A singleton instance of this class is yielded by Flexus.inflections, which can then be used to specify additional
   # inflection rules. Examples:
   #
-  #   Inflecto.inflections do |inflect|
+  #   Flexus.inflections do |inflect|
   #     inflect.plural /^(ox)$/i, '\1\2en'
   #     inflect.singular /^(ox)en/i, '\1'
   #
@@ -116,8 +116,8 @@ module Inflecto
     #
     # @example
     #
-    #   Inflecto.irregular('octopus', 'octopi')
-    #   Inflecto.irregular('person', 'people')
+    #   Flexus.irregular('octopus', 'octopi')
+    #   Flexus.irregular('person', 'people')
     #
     # @param [String] singular
     # @param [String] plural
@@ -142,9 +142,9 @@ module Inflecto
     #
     # @example
     #
-    #   Inflecto.uncountable "money"
-    #   Inflecto.uncountable "money", "information"
-    #   Inflecto.uncountable %w( money information rice )
+    #   Flexus.uncountable "money"
+    #   Flexus.uncountable "money", "information"
+    #   Flexus.uncountable %w( money information rice )
     #
     # @param [Enumerable<String>] words
     #
@@ -165,8 +165,8 @@ module Inflecto
     # When a string is used, the human form should be specified as desired (example: 'The name', not 'the_name')
     #
     # @example
-    #   Inflecto.human(/_cnt$/i, '\1_count')
-    #   Inflecto.human("legacy_col_person_name", "Name")
+    #   Flexus.human(/_cnt$/i, '\1_count')
+    #   Flexus.human("legacy_col_person_name", "Name")
     #
     # @param [String, Regexp] rule
     # @param [String, Regexp] replacement
@@ -184,7 +184,7 @@ module Inflecto
     #
     # @example
     #
-    #   Inflecto.clear
+    #   Flexus.clear
     #
     # @return [self]
     #

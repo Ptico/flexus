@@ -1,4 +1,4 @@
-inflecto
+flexus
 ========
 
 [![Gem Version](https://badge.fury.io/rb/inflecto.png)][gem]
@@ -13,14 +13,15 @@ inflecto
 [codeclimate]: https://codeclimate.com/github/mbj/inflecto
 [coveralls]: https://coveralls.io/r/mbj/inflecto
 
-This is a standalone inflector ripped out from [dm-core](https://github.com/datamapper/dm-core)
+This is a fork of [inflecto](https://github.com/mbj/inflecto)
+Inflecto is a standalone inflector ripped out from [dm-core](https://github.com/datamapper/dm-core)
 The dm-core inflector originated from [extlib](https://github.com/datamapper/extlib)
 The extlib inflecto originated from [active_support](https://github.com/rails/rails)
 
 Installation
 ------------
 
-Install the gem ```inflecto``` via your preferred method.
+Install the gem ```flexus``` via your preferred method.
 
 Examples
 --------
@@ -32,7 +33,9 @@ Credits
 
 The rails, merb & datamapper team
 
-The current maintainer is Markus Schirp ([mbj](https://github.com/mbj)) with help from [indrekj](https://github.com/indrekj).
+The original gem was extracted and maintained by Markus Schirp ([mbj](https://github.com/mbj)) with help from [indrekj](https://github.com/indrekj).
+
+Current maintainers: Andrii Savchenko [Ptico](https://github.com/Ptico) and Abinoam P. Marques Jr. [abinoam](https://github.com/abinoam)
 
 Contributing
 -------------

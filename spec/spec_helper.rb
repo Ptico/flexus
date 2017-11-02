@@ -13,24 +13,11 @@ if ENV['COVERAGE'] == 'true'
   end
 end
 
-require 'inflecto'
+require 'flexus'
 
 # require spec support files and shared behavior
 Dir[File.expand_path('../{support,shared}/**/*.rb', __FILE__)].each do |file|
   require file
-end
-
-# Mutant is already using inflecto. If it mutates inflecto methods then our
-# tests start to fail. Instead, we force mutant to use unmutated version of
-# inflecto.
-if defined?(Mutant)
-  module Mutant
-    module Inflecto
-      ::Inflecto.singleton_methods.each do |name|
-        define_singleton_method name, ::Inflecto.method(name).to_proc
-      end
-    end
-  end
 end
 
 RSpec.configure do |config|

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto::Inflections, '#plural' do
+describe Flexus::Inflections, '#plural' do
   subject { object.plural(rule, replacement) }
 
   let(:object)      { described_class.new }

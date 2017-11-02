@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto::Inflections, '#irregular' do
+describe Flexus::Inflections, '#irregular' do
   subject { object.irregular(singular, plural) }
 
   let(:object)   { described_class.new }

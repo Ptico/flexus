@@ -1,6 +1,6 @@
 require 'set'
 
-# The Inflecto transforms words from singular to plural, class names to table names, modularized class names to ones without,
+# The Flexus transforms words from singular to plural, class names to table names, modularized class names to ones without,
 # and class names to foreign keys. The default inflections for pluralization, singularization, and uncountable words are kept
 # in inflections.rb.
 #
@@ -8,7 +8,7 @@ require 'set'
 # in order to avoid breaking legacy applications which may be relying on errant inflections.
 # If you discover an incorrect inflection and require it for your application, you'll need
 # to correct it yourself (explained below).
-module Inflecto
+module Flexus
 
   # Convert input to UpperCamelCase
   #
@@ -17,8 +17,8 @@ module Inflecto
   # @param [String] input
   #
   # @example
-  #   Inflecto.camelize("data_mapper")        # => "DataMapper"
-  #   Inflecto.camelize("data_mapper/errors") # => "DataMapper::Errors"
+  #   Flexus.camelize("data_mapper")        # => "DataMapper"
+  #   Flexus.camelize("data_mapper/errors") # => "DataMapper::Errors"
   #
   # @return [String]
   #
@@ -35,8 +35,8 @@ module Inflecto
   # @param [String] input
   #
   # @example
-  #   Inflecto.underscore("DataMapper")         # => "data_mapper"
-  #   Inflecto.underscore("DataMapper::Errors") # => "data_mapper/errors"
+  #   Flexus.underscore("DataMapper")         # => "data_mapper"
+  #   Flexus.underscore("DataMapper::Errors") # => "data_mapper/errors"
   #
   # @return [String]
   #
@@ -52,7 +52,7 @@ module Inflecto
   # @param [String] input
   #
   # @example
-  #   Inflecto.dasherize("foo_bar") # => "foo-bar"
+  #   Flexus.dasherize("foo_bar") # => "foo-bar"
   #
   # @return [String]
   #
@@ -68,8 +68,8 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.demodulize("DataMapper::Error") # => "Error"
-  #   Inflecto.demodulize("DataMapper")        # => "DataMapper"
+  #   Flexus.demodulize("DataMapper::Error") # => "Error"
+  #   Flexus.demodulize("DataMapper")        # => "DataMapper"
   #
   # @return [String]
   #
@@ -85,7 +85,7 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.foreign_key("Message") => "message_id"
+  #   Flexus.foreign_key("Message") => "message_id"
   #
   # @return [String]
   #
@@ -103,8 +103,8 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.constantize("Module")            # => Module
-  #   Inflecto.constantize("DataMapper::Error") # => DataMapper::Error
+  #   Flexus.constantize("Module")            # => Module
+  #   Flexus.constantize("DataMapper::Error") # => DataMapper::Error
   #
   # @return [Class, Module]
   #
@@ -154,15 +154,15 @@ module Inflecto
     end
   end
 
-  # Yields a singleton instance of Inflecto::Inflections
+  # Yields a singleton instance of Flexus::Inflections
   #
   # @example
   #
-  #   Inflecto.inflections do |inflect|
+  #   Flexus.inflections do |inflect|
   #     inflect.uncountable "rails"
   #   end
   #
-  # @return [Inflecto::Inflections]
+  # @return [Flexus::Inflections]
   #
   # @api public
   #
@@ -177,11 +177,11 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.pluralize("post")         # => "posts"
-  #   Inflecto.pluralize("octopus")      # => "octopi"
-  #   Inflecto.pluralize("sheep")        # => "sheep"
-  #   Inflecto.pluralize("words")        # => "words"
-  #   Inflecto.pluralize("CamelOctopus") # => "CamelOctopi"
+  #   Flexus.pluralize("post")         # => "posts"
+  #   Flexus.pluralize("octopus")      # => "octopi"
+  #   Flexus.pluralize("sheep")        # => "sheep"
+  #   Flexus.pluralize("words")        # => "words"
+  #   Flexus.pluralize("CamelOctopus") # => "CamelOctopi"
   #
   # @return [String]
   #
@@ -198,11 +198,11 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.singularize("posts") # => "post"
-  #   Inflecto.singularize("octopi") # => "octopus"
-  #   Inflecto.singularize("sheep") # => "sheep"
-  #   Inflecto.singularize("word") # => "word"
-  #   Inflecto.singularize("CamelOctopi") # => "CamelOctopus"
+  #   Flexus.singularize("posts") # => "post"
+  #   Flexus.singularize("octopi") # => "octopus"
+  #   Flexus.singularize("sheep") # => "sheep"
+  #   Flexus.singularize("word") # => "word"
+  #   Flexus.singularize("CamelOctopi") # => "CamelOctopus"
   #
   # @return [String]
   #
@@ -222,8 +222,8 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.humanize("employee_salary") # => "Employee salary"
-  #   Inflecto.humanize("author_id")       # => "Author"
+  #   Flexus.humanize("employee_salary") # => "Employee salary"
+  #   Flexus.humanize("author_id")       # => "Author"
   #
   # @return [String]
   #
@@ -246,9 +246,9 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.tableize("RawScaledScorer") # => "raw_scaled_scorers"
-  #   Inflecto.tableize("egg_and_ham")     # => "egg_and_hams"
-  #   Inflecto.tableize("fancyCategory")   # => "fancy_categories"
+  #   Flexus.tableize("RawScaledScorer") # => "raw_scaled_scorers"
+  #   Flexus.tableize("egg_and_ham")     # => "egg_and_hams"
+  #   Flexus.tableize("fancyCategory")   # => "fancy_categories"
   #
   # @return [String]
   #
@@ -268,11 +268,11 @@ module Inflecto
   #
   # @examples:
   #
-  #   Inflecto.classify("egg_and_hams") # => "EggAndHam"
-  #   Inflecto.classify("posts")        # => "Post"
+  #   Flexus.classify("egg_and_hams") # => "EggAndHam"
+  #   Flexus.classify("posts")        # => "Post"
   #
   #   # Singular names are not handled correctly:
-  #   Inflecto.classify("business")     # => "Busines"
+  #   Flexus.classify("business")     # => "Busines"
   #
   # @return [String]
   #
@@ -287,8 +287,8 @@ module Inflecto
   #
   # @example
   #
-  #   Inflecto.uncountable?('rice') #=> true
-  #   Inflecto.uncountable?('apple') #=> false
+  #   Flexus.uncountable?('rice') #=> true
+  #   Flexus.uncountable?('apple') #=> false
   #
   # @param [String] word
   #
@@ -309,8 +309,8 @@ module Inflecto
   # @param [String] input
   #
   # @example
-  #   Inflecto.underscorize("DataMapper")         # => "data_mapper"
-  #   Inflecto.underscorize("DataMapper::Errors") # => "data_mapper::errors"
+  #   Flexus.underscorize("DataMapper")         # => "data_mapper"
+  #   Flexus.underscorize("DataMapper::Errors") # => "data_mapper::errors"
   #
   # @return [String]
   #
@@ -326,6 +326,6 @@ module Inflecto
   private_class_method :underscorize
 end
 
-require 'inflecto/rules_collection'
-require 'inflecto/inflections'
-require 'inflecto/defaults'
+require 'flexus/rules_collection'
+require 'flexus/inflections'
+require 'flexus/defaults'

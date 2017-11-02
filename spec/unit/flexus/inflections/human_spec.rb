@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto::Inflections, '#human' do
+describe Flexus::Inflections, '#human' do
   subject { object.human(rule, replacement) }
 
   let(:object)      { described_class.new }

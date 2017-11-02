@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto, '.pluralize' do
+describe Flexus, '.pluralize' do
 
   SINGULAR_TO_PLURAL = {
     'equipment'    => 'equipment',
@@ -199,7 +199,7 @@ describe Inflecto, '.pluralize' do
 
   SINGULAR_TO_PLURAL.each do |singular, plural|
     it "pluralizes #{singular} => #{plural}" do
-      Inflecto.pluralize(i(singular)).should eql(plural)
+      Flexus.pluralize(i(singular)).should eql(plural)
     end
   end
 

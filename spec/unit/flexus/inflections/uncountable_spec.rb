@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Inflecto::Inflections, '#uncountable' do
+describe Flexus::Inflections, '#uncountable' do
   let(:object) { described_class.new }
 
   context 'when word given' do

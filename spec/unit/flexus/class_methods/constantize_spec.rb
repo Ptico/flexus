@@ -1,16 +1,16 @@
 require 'spec_helper'
 
-describe Inflecto, '.constantize' do
+describe Flexus, '.constantize' do
   it 'constantizes Module' do
-    Inflecto.constantize(i('Module')).should == Module
+    Flexus.constantize(i('Module')).should == Module
   end
 
   it 'constantizes ::Module' do
-    Inflecto.constantize(i('::Module')).should == Module
+    Flexus.constantize(i('::Module')).should == Module
   end
 
-  it 'constantizes nested constant Inflecto::Inflections' do
-    Inflecto.constantize(i('Inflecto::Inflections')).should == Inflecto::Inflections
+  it 'constantizes nested constant Flexus::Inflections' do
+    Flexus.constantize(i('Flexus::Inflections')).should == Flexus::Inflections
   end
 
   it 'does not search ancestors' do
@@ -23,7 +23,7 @@ describe Inflecto, '.constantize' do
     end
 
     expect {
-      Inflecto.constantize(i('Foo::Baz::VAL'))
+      Flexus.constantize(i('Foo::Baz::VAL'))
     }.to raise_error(NameError)
   end
 
@@ -42,19 +42,19 @@ describe Inflecto, '.constantize' do
       end
     end
 
-    Inflecto.constantize(i('Foo::Autoloaded::Const')).should == Foo::Baz
-    Inflecto.constantize(i('Foo::Bar::Const')).should == Foo::Baz
+    Flexus.constantize(i('Foo::Autoloaded::Const')).should == Foo::Baz
+    Flexus.constantize(i('Foo::Bar::Const')).should == Foo::Baz
   end
 
   it 'raises exception when empty string given' do
     expect {
-      Inflecto.constantize(i(''))
+      Flexus.constantize(i(''))
     }.to raise_error(NameError)
   end
 
   it 'raises exception when constant not found' do
     expect {
-      Inflecto.constantize(i('Qwerty'))
+      Flexus.constantize(i('Qwerty'))
     }.to raise_error(NameError)
   end
 end

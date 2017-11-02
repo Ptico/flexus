@@ -1,19 +1,19 @@
 require 'spec_helper'
 
-describe Inflecto, '.uncountable?' do
+describe Flexus, '.uncountable?' do
   it 'truthy when empty string' do
-    Inflecto.uncountable?('').should be(true)
+    Flexus.uncountable?('').should be(true)
   end
 
   it 'truthy when word is present in list' do
-    Inflecto.uncountable?('grass').should be(true)
+    Flexus.uncountable?('grass').should be(true)
   end
 
   it 'falsy when word is not present in list' do
-    Inflecto.uncountable?('user').should be(false)
+    Flexus.uncountable?('user').should be(false)
   end
 
   it 'truthy when word is present in list but in different case' do
-    Inflecto.uncountable?('FiSH').should be(true)
+    Flexus.uncountable?('FiSH').should be(true)
   end
 end
