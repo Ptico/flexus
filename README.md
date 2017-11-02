@@ -13,7 +13,7 @@ flexus
 [codeclimate]: https://codeclimate.com/github/mbj/inflecto
 [coveralls]: https://coveralls.io/r/mbj/inflecto
 
-This is a fork of [inflecto](https://github.com/mbj/inflecto)
+This gem is a resurrection of [inflecto](https://github.com/mbj/inflecto)
 Inflecto is a standalone inflector ripped out from [dm-core](https://github.com/datamapper/dm-core)
 The dm-core inflector originated from [extlib](https://github.com/datamapper/extlib)
 The extlib inflecto originated from [active_support](https://github.com/rails/rails)
