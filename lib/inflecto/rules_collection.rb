@@ -8,8 +8,8 @@ module Inflecto
       :each, :insert, :empty?,
       :size, :last, :include?
 
-    def initialize(rules=nil)
-      @collection = rules || []
+    def initialize(*args)
+      @collection = Array.new(*args)
     end
 
     # Applies first found rule to given word
