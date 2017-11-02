@@ -43,6 +43,7 @@ describe Inflecto, '.singularize' do
     'octopi' => 'octopus',
     'grass' => 'grass',
   # ==== bugs, typos and reported issues
+    'address' => 'address',
 
   # ==== rules
 
