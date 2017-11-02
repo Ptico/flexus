@@ -18,10 +18,16 @@ Inflecto is a standalone inflector ripped out from [dm-core](https://github.com/
 The dm-core inflector originated from [extlib](https://github.com/datamapper/extlib)
 The extlib inflecto originated from [active_support](https://github.com/rails/rails)
 
-Installation
-------------
+Migration from `inflecto`
+-------------------------
 
-Install the gem ```flexus``` via your preferred method.
+Version `0.1.0` have some performance improvements and bugfixes, but trying to not break the `inflecto` functionality. So just change `inflecto` to `flexus` and lock the version to `0.1.0`.
+
+```ruby
+gem 'flexus', '0.1.0'
+```
+
+Other versions till `1.0.0` can break things. So use `~> 0.1` on your own risk.
 
 Examples
 --------
