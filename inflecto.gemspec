@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name        = 'flexus'
-  gem.version     = '0.1.0'
+  gem.version     = '0.1.1'
   gem.authors     = ['The rails, merb & datamapper team', 'Markus Schirp']
   gem.email       = ['mbj@seonic.net']
   gem.description = 'Inflector for strings'

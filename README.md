@@ -21,10 +21,10 @@ The extlib inflecto originated from [active_support](https://github.com/rails/ra
 Migration from `inflecto`
 -------------------------
 
-Version `0.1.0` have some performance improvements and bugfixes, but trying to not break the `inflecto` functionality. So just change `inflecto` to `flexus` and lock the version to `0.1.0`.
+Version `0.1.1` have some performance improvements and bugfixes, but trying to not break the `inflecto` functionality. So just change `inflecto` to `flexus` and lock the version to `0.1.1`.
 
 ```ruby
-gem 'flexus', '0.1.0'
+gem 'flexus', '0.1.1'
 ```
 
 Other versions till `1.0.0` can break things. So use `~> 0.1` on your own risk.
