@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.test_files       = `git ls-files spec/{unit,integration}`.split($/)
   gem.extra_rdoc_files = %w[LICENSE README.md TODO]
 
-  gem.required_ruby_version = '>= 1.9.3'
+  gem.required_ruby_version = '>= 2.1'
 end
