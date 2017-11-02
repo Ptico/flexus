@@ -5,3 +5,4 @@ AllCops:
     - 'Gemfile'
     - 'Guardfile'
     - 'inflecto.gemspec'
+    - 'vendor/**/*'
