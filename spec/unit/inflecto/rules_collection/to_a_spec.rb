@@ -9,5 +9,9 @@ describe Inflecto::RulesCollection, '#to_a' do
 
   it { expect(array).to be_an_instance_of(Array) }
   it { expect(rules_collection).to be_an_instance_of(Inflecto::RulesCollection) }
-  it { expect(array).to eq collection_instance }
+
+  describe "doesn't expose inner implementation" do
+    it { expect(array).to     eq collection_instance }
+    it { expect(array).to_not be collection_instance }
+  end
 end
