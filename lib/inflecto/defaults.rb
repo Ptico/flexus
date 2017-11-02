@@ -33,6 +33,7 @@ Inflecto.inflections do |inflect|
   inflect.singular(/([^aeiouy]|qu)ies\z/i, '\1y')
   inflect.singular(/(s)eries\z/i, '\1eries')
   inflect.singular(/(m)ovies\z/i, '\1ovie')
+  inflect.singular(/(ss)\z/i, '\1')
   inflect.singular(/(x|ch|ss|sh)es\z/i, '\1')
   inflect.singular(/([m|l])ice\z/i, '\1ouse')
   inflect.singular(/(bus)es\z/i, '\1')
