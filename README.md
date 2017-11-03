@@ -24,18 +24,32 @@ The extlib inflecto originated from [active_support](https://github.com/rails/ra
 Migration from `inflecto`
 -------------------------
 
-Version `0.1.1` have some performance improvements and bugfixes, but trying to not break the `inflecto` functionality. So just change `inflecto` to `flexus` and lock the version to `0.1.1`.
+Remove inflecto and add flexus to your Gemfile.
 
 ```ruby
-gem 'flexus', '0.1.1'
+gem 'flexus', '1.0.0'
 ```
 
-Other versions till `1.0.0` can break things. So use `~> 0.1` on your own risk.
+At your code, change all `Inflecto` references to `Flexus` and it should work out of the box for flexus version 1.0.0. Please report any issues.
+
+Flexus will try the best to respect semantic versioning as http://semver.org/
+So, expect api breaking changes on major version releases.
+
+We'll make pre release gems for 2.0.0 version. To experiment with that you should add this to your Gemfile.
+
+```ruby
+gem 'flexus', '>= 2.0.0.beta'
+```
 
 Examples
 --------
 
-Soon.
+```ruby
+require 'flexus'
+
+Flexus.underscore("CamelCase")
+# => "camel_case"
+```
 
 Credits
 -------
@@ -61,4 +75,4 @@ Contributing
 License
 -------
 
-See LICENSE for details
+See LICENSE.txt for details

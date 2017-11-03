@@ -6,3 +6,5 @@ AllCops:
     - 'Guardfile'
     - 'flexus.gemspec'
     - 'vendor/**/*'
+Style/StringLiterals:
+  EnforcedStyle: 'double_quotes'
