@@ -1,4 +1,4 @@
 ---
-name: inflecto
-namespace: Inflecto
+name: flexus
+namespace: Flexus
 expect_coverage: '331/332'

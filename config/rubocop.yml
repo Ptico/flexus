@@ -4,5 +4,5 @@ AllCops:
     - 'spec/**/*'
     - 'Gemfile'
     - 'Guardfile'
-    - 'inflecto.gemspec'
+    - 'flexus.gemspec'
     - 'vendor/**/*'

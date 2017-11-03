@@ -1,26 +1,36 @@
-inflecto
+flexus
 ========
 
-[![Gem Version](https://badge.fury.io/rb/inflecto.png)][gem]
-[![Build Status](https://secure.travis-ci.org/mbj/inflecto.png?branch=master)][travis]
-[![Dependency Status](https://gemnasium.com/mbj/inflecto.png)][gemnasium]
-[![Code Climate](https://codeclimate.com/github/mbj/inflecto.png)][codeclimate]
-[![Coverage Status](https://coveralls.io/repos/mbj/inflecto/badge.png?branch=master)][coveralls]
+[![Gem Version](https://badge.fury.io/rb/flexus.png)][gem]
+[![Build Status](https://secure.travis-ci.org/Ptico/flexus.png?branch=master)][travis]
+[![Dependency Status](https://gemnasium.com/badges/github.com/Ptico/flexus.svg)][gemnasium]
+[![Code Climate](https://codeclimate.com/github/Ptico/flexus.png)][codeclimate]
+[![Coverage Status](https://coveralls.io/repos/Ptico/flexus/badge.png?branch=master)][coveralls]
 
-[gem]: https://rubygems.org/gems/inflecto
-[travis]: https://travis-ci.org/mbj/inflecto
-[gemnasium]: https://gemnasium.com/mbj/inflecto
-[codeclimate]: https://codeclimate.com/github/mbj/inflecto
-[coveralls]: https://coveralls.io/r/mbj/inflecto
+[gem]: https://rubygems.org/gems/flexus
+[travis]: https://travis-ci.org/Ptico/flexus
+[gemnasium]: https://gemnasium.com/Ptico/flexus
+[codeclimate]: https://codeclimate.com/github/Ptico/flexus
+[coveralls]: https://coveralls.io/r/Ptico/flexus
 
-This is a standalone inflector ripped out from [dm-core](https://github.com/datamapper/dm-core)
+This gem is a resurrection of [inflecto](https://github.com/mbj/inflecto)
+
+Inflecto is a standalone inflector ripped out from [dm-core](https://github.com/datamapper/dm-core)
+
 The dm-core inflector originated from [extlib](https://github.com/datamapper/extlib)
+
 The extlib inflecto originated from [active_support](https://github.com/rails/rails)
 
-Installation
-------------
+Migration from `inflecto`
+-------------------------
 
-Install the gem ```inflecto``` via your preferred method.
+Version `0.1.1` have some performance improvements and bugfixes, but trying to not break the `inflecto` functionality. So just change `inflecto` to `flexus` and lock the version to `0.1.1`.
+
+```ruby
+gem 'flexus', '0.1.1'
+```
+
+Other versions till `1.0.0` can break things. So use `~> 0.1` on your own risk.
 
 Examples
 --------
@@ -32,7 +42,9 @@ Credits
 
 The rails, merb & datamapper team
 
-The current maintainer is Markus Schirp ([mbj](https://github.com/mbj)) with help from [indrekj](https://github.com/indrekj).
+The original gem was extracted and maintained by Markus Schirp ([mbj](https://github.com/mbj)) with help from [indrekj](https://github.com/indrekj).
+
+Current maintainers: Andrii Savchenko [Ptico](https://github.com/Ptico) and Abinoam P. Marques Jr. [abinoam](https://github.com/abinoam)
 
 Contributing
 -------------

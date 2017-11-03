@@ -2,7 +2,7 @@
 Attribute:
   enabled: true
   exclude:
-  - Inflecto::Inflections
+  - Flexus::Inflections
 BooleanParameter:
   enabled: true
   exclude: []
@@ -15,13 +15,13 @@ ControlParameter:
 DataClump:
   enabled: true
   exclude:
-  - Inflecto::Inflections
+  - Flexus::Inflections
   max_copies: 2
   min_clump_size: 2
 DuplicateMethodCall:
   enabled: true
   exclude:
-  - Inflecto#self.camelize
+  - Flexus#self.camelize
   max_calls: 1
   allow_calls: []
 FeatureEnvy:
@@ -33,8 +33,8 @@ IrresponsibleModule:
 LongParameterList:
   enabled: true
   exclude:
-  - Inflecto::Inflections#add_irregular
-  - Inflecto::Inflections#rule
+  - Flexus::Inflections#add_irregular
+  - Flexus::Inflections#rule
   max_params: 2
   overrides:
     initialize:
@@ -58,7 +58,7 @@ RepeatedConditional:
 TooManyInstanceVariables:
   enabled: true
   exclude:
-  - Inflecto::Inflections
+  - Flexus::Inflections
   max_instance_variables: 3
 TooManyMethods:
   enabled: true
@@ -68,8 +68,8 @@ TooManyStatements:
   enabled: true
   exclude:
   - each
-  - 'Inflecto#self.underscore'
-  - 'Inflecto#self.ordinalize'
+  - 'Flexus#self.underscore'
+  - 'Flexus#self.ordinalize'
   max_statements: 5
 UncommunicativeMethodName:
   enabled: true
