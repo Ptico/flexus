@@ -21,7 +21,7 @@ Dir[File.expand_path('../{support,shared}/**/*.rb', __FILE__)].each do |file|
 end
 
 RSpec.configure do |config|
-  # Helps to ensure that inflecto does not modify original input
+  # Helps to ensure that flexus does not modify original input
   def i(object)
     object.freeze
   end
