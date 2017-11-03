@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
       "Markus Schirp",
       "Andrii Savchenko",
       "Abinoam P. Marques Jr." ]
-  spec.email       = ["abinoam@gmail.com"]
+  spec.email       = ["andrey@aejis.eu", "abinoam@gmail.com"]
   spec.description = "Inflector for strings"
   spec.summary     = spec.description
   spec.homepage    = "https://github.com/Ptico/flexus"
