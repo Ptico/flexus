@@ -1,17 +1,17 @@
 flexus
 ========
 
-[![Gem Version](https://badge.fury.io/rb/inflecto.png)][gem]
-[![Build Status](https://secure.travis-ci.org/mbj/inflecto.png?branch=master)][travis]
-[![Dependency Status](https://gemnasium.com/mbj/inflecto.png)][gemnasium]
-[![Code Climate](https://codeclimate.com/github/mbj/inflecto.png)][codeclimate]
-[![Coverage Status](https://coveralls.io/repos/mbj/inflecto/badge.png?branch=master)][coveralls]
+[![Gem Version](https://badge.fury.io/rb/flexus.png)][gem]
+[![Build Status](https://secure.travis-ci.org/Ptico/flexus.png?branch=master)][travis]
+[![Dependency Status](https://gemnasium.com/badges/github.com/Ptico/flexus.svg)][gemnasium]
+[![Code Climate](https://codeclimate.com/github/Ptico/flexus.png)][codeclimate]
+[![Coverage Status](https://coveralls.io/repos/Ptico/flexus/badge.png?branch=master)][coveralls]
 
-[gem]: https://rubygems.org/gems/inflecto
-[travis]: https://travis-ci.org/mbj/inflecto
-[gemnasium]: https://gemnasium.com/mbj/inflecto
-[codeclimate]: https://codeclimate.com/github/mbj/inflecto
-[coveralls]: https://coveralls.io/r/mbj/inflecto
+[gem]: https://rubygems.org/gems/flexus
+[travis]: https://travis-ci.org/Ptico/flexus
+[gemnasium]: https://gemnasium.com/Ptico/flexus
+[codeclimate]: https://codeclimate.com/github/Ptico/flexus
+[coveralls]: https://coveralls.io/r/Ptico/flexus
 
 This gem is a resurrection of [inflecto](https://github.com/mbj/inflecto)
 
