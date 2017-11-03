@@ -4,7 +4,8 @@ flexus
 [![Gem Version](https://badge.fury.io/rb/flexus.png)][gem]
 [![Build Status](https://secure.travis-ci.org/Ptico/flexus.png?branch=master)][travis]
 [![Dependency Status](https://gemnasium.com/badges/github.com/Ptico/flexus.svg)][gemnasium]
-[![Code Climate](https://codeclimate.com/github/Ptico/flexus.png)][codeclimate]
+[![Maintainability](https://api.codeclimate.com/v1/badges/13a7eecf99ae954a5786/maintainability)](https://codeclimate.com/github/Ptico/flexus/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/13a7eecf99ae954a5786/test_coverage)](https://codeclimate.com/github/Ptico/flexus/test_coverage)
 [![Coverage Status](https://coveralls.io/repos/Ptico/flexus/badge.png?branch=master)][coveralls]
 
 [gem]: https://rubygems.org/gems/flexus
