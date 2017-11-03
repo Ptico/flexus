@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.require_paths    = %w[lib]
   gem.files            = `git ls-files`.split($/)
   gem.test_files       = `git ls-files spec/{unit,integration}`.split($/)
-  gem.extra_rdoc_files = %w[LICENSE README.md TODO]
+  gem.extra_rdoc_files = %w[LICENSE.txt README.md TODO]
 
   gem.required_ruby_version = '>= 2.1'
 end

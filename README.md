@@ -61,4 +61,4 @@ Contributing
 License
 -------
 
-See LICENSE for details
+See LICENSE.txt for details
