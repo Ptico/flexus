@@ -1,12 +1,12 @@
 flexus
 ========
 
-[![Gem Version](https://badge.fury.io/rb/flexus.png)][gem]
-[![Build Status](https://secure.travis-ci.org/Ptico/flexus.png?branch=master)][travis]
+[![Gem Version](https://img.shields.io/gem/v/flexus.svg)][gem]
+[![Build Status](https://img.shields.io/travis/Ptico/flexus.svg)][travis]
 [![Dependency Status](https://gemnasium.com/badges/github.com/Ptico/flexus.svg)][gemnasium]
 [![Maintainability](https://api.codeclimate.com/v1/badges/13a7eecf99ae954a5786/maintainability)](https://codeclimate.com/github/Ptico/flexus/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/13a7eecf99ae954a5786/test_coverage)](https://codeclimate.com/github/Ptico/flexus/test_coverage)
-[![Coverage Status](https://coveralls.io/repos/Ptico/flexus/badge.png?branch=master)][coveralls]
+[![Coverage Status](https://coveralls.io/repos/github/Ptico/flexus/badge.svg?branch=master)][coveralls]
 
 [gem]: https://rubygems.org/gems/flexus
 [travis]: https://travis-ci.org/Ptico/flexus
