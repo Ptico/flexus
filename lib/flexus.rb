@@ -8,7 +8,7 @@ require 'set'
 # in order to avoid breaking legacy applications which may be relying on errant inflections.
 # If you discover an incorrect inflection and require it for your application, you'll need
 # to correct it yourself (explained below).
-module Flexus
+class Flexus
 
   # Convert input to UpperCamelCase
   #
@@ -24,7 +24,7 @@ module Flexus
   #
   # @api public
   #
-  def self.camelize(input)
+  def camelize(input)
     input.gsub(/\/(.?)/) { "::#{$1.upcase}" }.gsub(/(?:\A|_)(.)/) { $1.upcase }
   end
 
@@ -42,7 +42,7 @@ module Flexus
   #
   # @api public
   #
-  def self.underscore(input)
+  def underscore(input)
     word = input.gsub(/::/, '/')
     underscorize(word)
   end
@@ -58,7 +58,7 @@ module Flexus
   #
   # @api public
   #
-  def self.dasherize(input)
+  def dasherize(input)
     input.tr('_', '-')
   end
 
@@ -75,7 +75,7 @@ module Flexus
   #
   # @api public
   #
-  def self.demodulize(input)
+  def demodulize(input)
     input.split('::').last
   end
 
@@ -91,7 +91,7 @@ module Flexus
   #
   # @api public
   #
-  def self.foreign_key(input)
+  def foreign_key(input)
     "#{underscorize(demodulize(input))}_id"
   end
 
@@ -110,7 +110,7 @@ module Flexus
   #
   # @api public
   #
-  def self.constantize(input)
+  def constantize(input)
     names = input.split('::')
     names.shift if names.first.empty?
 
@@ -140,7 +140,7 @@ module Flexus
   #
   # @api public
   #
-  def self.ordinalize(number)
+  def ordinalize(number)
     abs_value = number.abs
 
     if ORDINALIZE_TH.include?(abs_value % 100)
@@ -166,7 +166,7 @@ module Flexus
   #
   # @api public
   #
-  def self.inflections
+  def inflections
     instance = Inflections.instance
     block_given? ? yield(instance) : instance
   end
@@ -187,7 +187,7 @@ module Flexus
   #
   # @api public
   #
-  def self.pluralize(word)
+  def pluralize(word)
     return word if uncountable?(word)
     inflections.plurals.apply_to(word)
   end
@@ -208,7 +208,7 @@ module Flexus
   #
   # @api public
   #
-  def self.singularize(word)
+  def singularize(word)
     return word if uncountable?(word)
     inflections.singulars.apply_to(word)
   end
@@ -229,7 +229,7 @@ module Flexus
   #
   # @api public
   #
-  def self.humanize(input)
+  def humanize(input)
     result = inflections.humans.apply_to(input)
     result.gsub!(/_id\z/, "")
     result.tr!('_', " ")
@@ -254,7 +254,7 @@ module Flexus
   #
   # @api public
   #
-  def self.tableize(input)
+  def tableize(input)
     word = input.gsub(/::/, '_')
     pluralize(underscorize(word))
   end
@@ -278,7 +278,7 @@ module Flexus
   #
   # @api public
   #
-  def self.classify(table_name)
+  def classify(table_name)
     # strip out any leading schema name
     camelize(singularize(table_name.sub(/.*\./, '')))
   end
@@ -297,7 +297,7 @@ module Flexus
   #
   # @api public
   #
-  def self.uncountable?(word)
+  def uncountable?(word)
     word.empty? || inflections.uncountables.include?(word.downcase)
   end
 
@@ -316,14 +316,15 @@ module Flexus
   #
   # @api private
   #
-  def self.underscorize(word)
+  def underscorize(word)
     word.gsub!(/([A-Z]+)([A-Z][a-z])/,'\1_\2')
     word.gsub!(/([a-z\d])([A-Z])/,'\1_\2')
     word.tr!('-', '_')
     word.downcase!
     word
   end
-  private_class_method :underscorize
+
+  private :underscorize
 end
 
 require 'flexus/rules_collection'

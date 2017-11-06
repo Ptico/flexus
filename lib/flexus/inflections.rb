@@ -1,4 +1,4 @@
-module Flexus
+class Flexus
   # A singleton instance of this class is yielded by Flexus.inflections, which can then be used to specify additional
   # inflection rules. Examples:
   #
