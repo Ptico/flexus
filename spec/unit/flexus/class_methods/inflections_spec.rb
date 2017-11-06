@@ -9,13 +9,13 @@ describe Flexus, '.inflections' do
         yielded = inflect
       end
 
-      yielded.should be(Flexus::Inflections.instance)
+      yielded.should be(Flexus.instance.inflections_instance)
     end
   end
 
   context 'when without block' do
     subject { described_class.inflections }
 
-    it { should be(Flexus::Inflections.instance) }
+    it { should be(Flexus.instance.inflections_instance) }
   end
 end

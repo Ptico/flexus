@@ -1,4 +1,5 @@
 require 'set'
+require 'forwardable'
 
 # The Flexus transforms words from singular to plural, class names to table names, modularized class names to ones without,
 # and class names to foreign keys. The default inflections for pluralization, singularization, and uncountable words are kept
@@ -9,6 +10,24 @@ require 'set'
 # If you discover an incorrect inflection and require it for your application, you'll need
 # to correct it yourself (explained below).
 class Flexus
+  extend SingleForwardable
+
+  def_single_delegators :instance,
+    :camelize, :underscore, :dasherize,
+    :demodulize, :foreign_key, :constantize,
+    :ordinalize, :inflections, :pluralize,
+    :singularize, :humanize, :tableize,
+    :classify, :uncountable?, :underscorize
+
+  def self.instance
+    @__instance__ ||= new
+  end
+
+  attr_reader :inflections_instance
+
+  def initialize
+    @inflections_instance = Inflections.new
+  end
 
   # Convert input to UpperCamelCase
   #
@@ -167,8 +186,7 @@ class Flexus
   # @api public
   #
   def inflections
-    instance = Inflections.instance
-    block_given? ? yield(instance) : instance
+    block_given? ? yield(inflections_instance) : inflections_instance
   end
 
   # Convert input word string to plural
