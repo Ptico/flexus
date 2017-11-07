@@ -17,16 +17,6 @@ class Flexus
   #
   class Inflections
 
-    # Return instance
-    #
-    # @return [Inflections]
-    #
-    # @api private
-    #
-    def self.instance
-      @__instance__ ||= new
-    end
-
     # Return plurals
     #
     # @return [Array]
