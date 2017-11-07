@@ -50,6 +50,27 @@ require 'flexus'
 
 Flexus.underscore("CamelCase")
 # => "camel_case"
+
+inflector = Flexus.new
+
+# This loads reasonably good defaults to english language
+# singularization and pluralization.
+inflector.load_defaults
+
+inflector.pluralize("tomato")
+# => "tomatoes"
+
+# You can override rules on a per instance base
+inflector.inflections do |inflect|
+  inflect.plural(/(tomat)o\z/i, '\1ozechies')
+end
+
+inflector.pluralize("tomato")
+# => "tomatozechies"
+
+Flexus.pluralize("tomato")
+# => "tomatoes" # <- Still default pluralization
+
 ```
 
 Credits

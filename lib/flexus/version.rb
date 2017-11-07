@@ -1,3 +1,3 @@
-module Flexus
-  VERSION = "1.0.0.beta.1"
+class Flexus
+  VERSION = "1.1.0"
 end
