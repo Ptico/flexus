@@ -8,13 +8,27 @@ describe Flexus, 'underscore' do
   describe 'allows to use per instance inflections' do
     let(:flexus_instance) { Flexus.new }
 
-    before do
-      flexus_instance.inflections do |inflect|
-        inflect.plural(/\z/, 'zishes')
+    describe 'being able to override defaults' do
+      before do
+        flexus_instance.inflections do |inflect|
+          inflect.plural(/\z/, 'zishes')
+        end
       end
+
+      it { expect(Flexus.pluralize("dog")).to          eq "dogs" }
+      it { expect(flexus_instance.pluralize("dog")).to eq "dogzishes" }
     end
 
-    it { expect(Flexus.pluralize("dog")).to          eq "dogs" }
-    it { expect(flexus_instance.pluralize("dog")).to eq "dogzishes" }
+    describe 'importing defaults to each instance' do
+      before { flexus_instance.load_defaults }
+
+      it { expect(Flexus.pluralize("status")).to eq "statuses" }
+      it { expect(flexus_instance.pluralize("status")).to eq "statuses" }
+    end
+
+    describe 'not importing defaults to each instance' do
+      it { expect(Flexus.pluralize("status")).to eq "statuses" }
+      it { expect(flexus_instance.pluralize("status")).to eq "status" }
+    end
   end
 end
