@@ -20,7 +20,7 @@ class Flexus
     :classify, :uncountable?, :underscorize
 
   def self.instance
-    @__instance__ ||= new
+    @__instance__ ||= new.load_defaults
   end
 
   attr_reader :inflections_instance
@@ -342,9 +342,14 @@ class Flexus
     word
   end
 
+  def load_defaults
+    inflections(&INFLECTIONS_DEFAULTS)
+    self
+  end
+
   private :underscorize
 end
 
 require 'flexus/rules_collection'
 require 'flexus/inflections'
-require 'flexus/defaults'
+require 'flexus/inflections_defaults'
