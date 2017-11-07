@@ -1,3 +1,16 @@
+This gem is **unmaintained**
+---------------------------------------
+
+As of 2017-11-07, this gem has merged with `Dry::Inflector`.
+
+`Dry::Inflector` and `Flexus` were overlapping.
+The developers of both gems decided to join efforts for a greater good.
+
+See: https://github.com/dry-rb/dry-inflector
+
+So, as soon as you can, migrate your code to `Dry::Inflector`.
+The migration should be easy and smooth.
+
 flexus
 ========
 
@@ -22,7 +35,7 @@ The dm-core inflector originated from [extlib](https://github.com/datamapper/ext
 
 The extlib inflecto originated from [active_support](https://github.com/rails/rails)
 
-Migration from `inflecto`
+Migration from **inflecto**
 -------------------------
 
 Remove inflecto and add flexus to your Gemfile.
