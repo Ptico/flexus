@@ -41,7 +41,7 @@ Migration from **inflecto**
 Remove inflecto and add flexus to your Gemfile.
 
 ```ruby
-gem 'flexus', '1.0.0'
+gem 'flexus', '~> 1.0.0'
 ```
 
 At your code, change all `Inflecto` references to `Flexus` and it should work out of the box for flexus version 1.0.0. Please report any issues.
