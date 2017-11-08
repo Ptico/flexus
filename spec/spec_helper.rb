@@ -13,7 +13,29 @@ if ENV['COVERAGE'] == 'true'
   end
 end
 
-require 'flexus'
+require 'dry/inflector'
+
+class Flexus
+  extend SingleForwardable
+
+  def_single_delegators :instance,
+    :camelize, :underscore, :dasherize,
+    :demodulize, :foreign_key, :constantize,
+    :ordinalize, :inflections, :pluralize,
+    :singularize, :humanize, :tableize,
+    :classify, :uncountable?, :underscorize
+
+  def self.instance
+    @__instance__ ||= Dry::Inflector.new
+  end
+end
+
+def self.Flexus()
+  Flexus.instance
+end
+
+Flexus::Inflections = Dry::Inflector::Inflections
+Flexus::RulesCollection = Dry::Inflector::Rules
 
 # require spec support files and shared behavior
 Dir[File.expand_path('../{support,shared}/**/*.rb', __FILE__)].each do |file|
